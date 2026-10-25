@@ -1,0 +1,23 @@
+[1025/214549.644:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214549.711:ERROR:content\browser\network_service_instance_impl.cc:818] Failed opening SSL key log file: \\.\aswMonFltProxy\21efc441148584bc
+[1025/214550.004:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214550.076:ERROR:ui\gl\angle_platform_impl.cc:47] vulkan_icd.cpp:158 (angle::vk::ScopedVkLoaderEnvironment::ScopedVkLoaderEnvironment): Error setting CWD for Vulkan layers init.
+[1025/214550.603:WARNING:ui\gl\angle_platform_impl.cc:52] vulkan_icd.cpp:388 (angle::vk::ChoosePhysicalDevice): Preferred device ICD not found. Using default physicalDevice instead.
+[1025/214628.199:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214628.324:ERROR:content\browser\network_service_instance_impl.cc:818] Failed opening SSL key log file: \\.\aswMonFltProxy\211f4d72251af405
+[1025/214629.077:ERROR:ui\gl\angle_platform_impl.cc:47] vulkan_icd.cpp:158 (angle::vk::ScopedVkLoaderEnvironment::ScopedVkLoaderEnvironment): Error setting CWD for Vulkan layers init.
+[1025/214629.127:WARNING:ui\gl\angle_platform_impl.cc:52] vulkan_icd.cpp:388 (angle::vk::ChoosePhysicalDevice): Preferred device ICD not found. Using default physicalDevice instead.
+[1025/214629.354:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214629.504:ERROR:gpu\ipc\client\command_buffer_proxy_impl.cc:285] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+[1025/214725.353:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214725.360:ERROR:content\browser\network_service_instance_impl.cc:818] Failed opening SSL key log file: \\.\aswMonFltProxy\4cf606d556a7fc3b
+[1025/214725.483:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214725.531:ERROR:ui\gl\angle_platform_impl.cc:47] vulkan_icd.cpp:158 (angle::vk::ScopedVkLoaderEnvironment::ScopedVkLoaderEnvironment): Error setting CWD for Vulkan layers init.
+[1025/214725.561:WARNING:ui\gl\angle_platform_impl.cc:52] vulkan_icd.cpp:388 (angle::vk::ChoosePhysicalDevice): Preferred device ICD not found. Using default physicalDevice instead.
+[1025/214728.372:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214732.854:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214743.195:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214743.205:ERROR:content\browser\network_service_instance_impl.cc:818] Failed opening SSL key log file: \\.\aswMonFltProxy\4cf606d556a7fc3b
+[1025/214743.502:ERROR:ui\gl\angle_platform_impl.cc:47] vulkan_icd.cpp:158 (angle::vk::ScopedVkLoaderEnvironment::ScopedVkLoaderEnvironment): Error setting CWD for Vulkan layers init.
+[1025/214743.523:WARNING:net\dns\dns_config_service_win.cc:609] Failed to read DnsConfig.
+[1025/214743.546:WARNING:ui\gl\angle_platform_impl.cc:52] vulkan_icd.cpp:388 (angle::vk::ChoosePhysicalDevice): Preferred device ICD not found. Using default physicalDevice instead.

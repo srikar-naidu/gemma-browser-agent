@@ -1,0 +1,1 @@
+Jarvis Control Center: a local-first voice assistant that listens, reasons with Gemma 4 E2B, and gets useful browser work done.

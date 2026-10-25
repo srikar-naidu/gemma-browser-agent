@@ -2,6 +2,18 @@
 
 Jarvis is a local-first voice assistant that combines Ollama, Gemma 4 E2B, browser speech APIs, Playwright, and a Next.js dashboard. It can answer questions, choose tools, and automate browser tasks such as opening websites, searching the web, and playing YouTube videos.
 
+## Launch video
+
+Watch the generated Jarvis launch video: [brag.mp4](brag-output-2026-10-25-214319/brag.mp4)
+
+![Jarvis launch video poster](brag-output-2026-10-25-214319/brag.jpg)
+
+To create a new launch video with Brag:
+
+```text
+/brag --tone "premium futuristic local AI voice assistant launch"
+```
+
 ## What it does
 
 - Listens through the browser microphone and speaks responses aloud.

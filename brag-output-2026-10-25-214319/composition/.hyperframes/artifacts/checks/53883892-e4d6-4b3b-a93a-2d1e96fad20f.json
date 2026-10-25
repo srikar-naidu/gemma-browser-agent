@@ -1,0 +1,1062 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<header id=\"header\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#header",
+        "dataAttributes": {},
+        "sourceFile": "D:\\HACKATHONS\\browser-agent\\brag-output-2026-10-25-214319\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <header id=\"header\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<aside id=\"left\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#left",
+        "dataAttributes": {},
+        "sourceFile": "D:\\HACKATHONS\\browser-agent\\brag-output-2026-10-25-214319\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <aside id=\"left\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<main id=\"center\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#center",
+        "dataAttributes": {},
+        "sourceFile": "D:\\HACKATHONS\\browser-agent\\brag-output-2026-10-25-214319\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <main id=\"center\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<aside id=\"right\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#right",
+        "dataAttributes": {},
+        "sourceFile": "D:\\HACKATHONS\\browser-agent\\brag-output-2026-10-25-214319\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <aside id=\"right\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<footer id=\"footer\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#footer",
+        "dataAttributes": {},
+        "sourceFile": "D:\\HACKATHONS\\browser-agent\\brag-output-2026-10-25-214319\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <footer id=\"footer\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Could not read the duration of 1 media element(s) within the validate timeout (music); their slot vs. source fit was not checked. Re-run with a longer --timeout if the source is slow to load.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "20",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      }
+    ]
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 2,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 5.556,
+        "selector": "#state-label",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 894.23,
+          "top": 543,
+          "right": 995.77,
+          "bottom": 557,
+          "width": 101.53,
+          "height": 14
+        },
+        "containerSelector": "div.orb",
+        "text": "LISTENING",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.48,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 894.23,
+          "y": 543,
+          "width": 101.53,
+          "height": 14
+        },
+        "firstSeen": 5.556,
+        "lastSeen": 18.889,
+        "occurrences": 7,
+        "heldMs": 0,
+        "times": [
+          5.556,
+          7.778,
+          10,
+          12.222,
+          14.444,
+          16.667,
+          18.889
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 14.444,
+        "selector": "#state-sub",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 832.48,
+          "top": 568,
+          "right": 1057.52,
+          "bottom": 579,
+          "width": 225.03,
+          "height": 11
+        },
+        "containerSelector": "div.orb",
+        "text": "RESULT RETURNED / SESSION LIVE",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.15,
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 832.48,
+          "y": 568,
+          "width": 225.03,
+          "height": 11
+        },
+        "firstSeen": 14.444,
+        "lastSeen": 18.889,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          14.444,
+          16.667,
+          18.889
+        ]
+      }
+    ],
+    "duration": 20,
+    "samples": [
+      1.111,
+      3.333,
+      5.556,
+      7.778,
+      10,
+      12.222,
+      14.444,
+      16.667,
+      18.889
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 2,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": false,
+    "errorCount": 15,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.77:1; WCAG AA requires 4.5:1.",
+        "text": "LOCAL SESSION / STANDBY",
+        "fg": "rgb(98,107,118)",
+        "bg": "rgb(3,5,10)",
+        "ratio": 3.77,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(112,120,130)",
+        "large": false,
+        "selector": "#top-status",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1647.5625,
+          "y": 61,
+          "width": 202.4375,
+          "height": 12
+        },
+        "time": 1.111,
+        "times": [
+          1.111,
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.84:1; WCAG AA requires 4.5:1.",
+        "text": "SYSTEM PROFILE",
+        "fg": "rgb(106,114,125)",
+        "bg": "rgb(17,18,23)",
+        "ratio": 3.84,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,125,135)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(1) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 95,
+          "y": 167,
+          "width": 230,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.84:1; WCAG AA requires 4.5:1.",
+        "text": "Gemma 4 E2B",
+        "fg": "rgb(105,114,125)",
+        "bg": "rgb(16,18,22)",
+        "ratio": 3.84,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(117,126,136)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(1) > div:nth-of-type(2) > span > small",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 95,
+          "y": 242,
+          "width": 107.03125,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.83:1; WCAG AA requires 4.5:1.",
+        "text": "Ollama / localhost",
+        "fg": "rgb(105,113,125)",
+        "bg": "rgb(15,17,22)",
+        "ratio": 3.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(117,125,136)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(1) > div:nth-of-type(3) > span > small",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 95,
+          "y": 310,
+          "width": 120.625,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.84:1; WCAG AA requires 4.5:1.",
+        "text": "Playwright tools",
+        "fg": "rgb(104,113,124)",
+        "bg": "rgb(14,16,21)",
+        "ratio": 3.84,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,124,134)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(1) > div:nth-of-type(4) > span > small",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 95,
+          "y": 378,
+          "width": 107.21875,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.84:1; WCAG AA requires 4.5:1.",
+        "text": "Convex sync",
+        "fg": "rgb(104,113,124)",
+        "bg": "rgb(14,16,21)",
+        "ratio": 3.84,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,124,134)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(1) > div:nth-of-type(5) > span > small",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 95,
+          "y": 446,
+          "width": 73.71875,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.82:1; WCAG AA requires 4.5:1.",
+        "text": "CONTROL CENTER",
+        "fg": "rgb(106,114,126)",
+        "bg": "rgb(17,19,24)",
+        "ratio": 3.82,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,126,137)",
+        "large": false,
+        "selector": "div > section > main > div:nth-of-type(1) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 413,
+          "y": 173,
+          "width": 123.21875,
+          "height": 12
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.79:1; WCAG AA requires 4.5:1.",
+        "text": "RESULT RETURNED / SESSION LIVE",
+        "fg": "rgb(105,118,132)",
+        "bg": "rgb(15,26,36)",
+        "ratio": 3.79,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(119,130,143)",
+        "large": false,
+        "selector": "#state-sub",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 832.484375,
+          "y": 568,
+          "width": 225.03125,
+          "height": 11
+        },
+        "time": 14.444,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.82:1; WCAG AA requires 4.5:1.",
+        "text": "FRIDAY BRAINSTANDBY",
+        "fg": "rgb(103,113,126)",
+        "bg": "rgb(12,17,25)",
+        "ratio": 3.82,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,125,137)",
+        "large": false,
+        "selector": "#brain-pill",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 413,
+          "y": 688,
+          "width": 526,
+          "height": 58
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.84:1; WCAG AA requires 4.5:1.",
+        "text": "TOOL ROUTINGREADY",
+        "fg": "rgb(103,114,126)",
+        "bg": "rgb(12,18,25)",
+        "ratio": 3.84,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,126,137)",
+        "large": false,
+        "selector": "#tool-pill",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 951,
+          "y": 688,
+          "width": 526,
+          "height": 58
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.82:1; WCAG AA requires 4.5:1.",
+        "text": "ACTIVITY STREAM",
+        "fg": "rgb(106,114,125)",
+        "bg": "rgb(17,19,23)",
+        "ratio": 3.82,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,126,136)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(2) > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1565,
+          "y": 167,
+          "width": 260,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.84:1; WCAG AA requires 4.5:1.",
+        "text": "All systems nominal",
+        "fg": "rgb(105,114,125)",
+        "bg": "rgb(16,18,22)",
+        "ratio": 3.84,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(117,126,136)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(2) > div:nth-of-type(2) > div > small",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1697.671875,
+          "y": 241,
+          "width": 127.328125,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.83:1; WCAG AA requires 4.5:1.",
+        "text": "Natural language input",
+        "fg": "rgb(105,113,125)",
+        "bg": "rgb(15,17,22)",
+        "ratio": 3.83,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(117,125,136)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(2) > div:nth-of-type(3) > div > small",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1677.578125,
+          "y": 308,
+          "width": 147.421875,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.84:1; WCAG AA requires 4.5:1.",
+        "text": "YouTube playback",
+        "fg": "rgb(104,113,124)",
+        "bg": "rgb(14,16,21)",
+        "ratio": 3.84,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,124,134)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(2) > div:nth-of-type(4) > div > small",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1717.78125,
+          "y": 375,
+          "width": 107.21875,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.84:1; WCAG AA requires 4.5:1.",
+        "text": "Useful hands, deployed",
+        "fg": "rgb(104,113,124)",
+        "bg": "rgb(14,16,21)",
+        "ratio": 3.84,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(116,124,134)",
+        "large": false,
+        "selector": "div > section > aside:nth-of-type(2) > div:nth-of-type(5) > div > small",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1677.578125,
+          "y": 442,
+          "width": 147.421875,
+          "height": 11
+        },
+        "time": 5.556,
+        "times": [
+          5.556,
+          10,
+          14.444,
+          18.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.75:1; WCAG AA requires 4.5:1.",
+        "text": "LOCAL INTELLIGENCE / USEFUL HANDS",
+        "fg": "rgb(98,106,117)",
+        "bg": "rgb(3,4,8)",
+        "ratio": 3.75,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(112,119,129)",
+        "large": false,
+        "selector": "div > footer > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 70,
+          "y": 1032,
+          "width": 316.84375,
+          "height": 14
+        },
+        "time": 18.889,
+        "times": [
+          18.889
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      1.111,
+      5.556,
+      10,
+      14.444,
+      18.889
+    ],
+    "checked": 145,
+    "passed": 83
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 36 text elements stay under it for 0.5 s or more, the smallest \"SYSTEM PROFILE\" at 10 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "SYSTEM PROFILE",
+        "selector": "#left > div:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 95,
+          "y": 167,
+          "width": 117.63,
+          "height": 11
+        },
+        "time": 3.375,
+        "times": [
+          0.5,
+          0.5,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.375,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.5,
+          3.75,
+          3.75,
+          3.75,
+          3.75,
+          3.75,
+          3.75,
+          3.75,
+          3.75,
+          3.75,
+          16.75,
+          16.75
+        ],
+        "fontPx": 10,
+        "floorPx": 28,
+        "seconds": 16.125,
+        "elements": [
+          {
+            "selector": "#left > div:nth-of-type(1)",
+            "text": "SYSTEM PROFILE",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(2) > span:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "Gemma 4 E2B",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(2) > b:nth-of-type(1)",
+            "text": "READY",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(3) > span:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "Ollama / localhost",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(3) > b:nth-of-type(1)",
+            "text": "LOCAL",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(4) > span:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "Playwright tools",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(4) > b:nth-of-type(1)",
+            "text": "ARMED",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(5) > span:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "Convex sync",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(5) > b:nth-of-type(1)",
+            "text": "LINKED",
+            "fontPx": 10,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#state-sub",
+            "text": "VOICE-FIRST PERSONAL OPERATIONS",
+            "fontPx": 10,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "#brain-pill",
+            "text": "FRIDAY BRAIN",
+            "fontPx": 10,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "#tool-pill",
+            "text": "TOOL ROUTING",
+            "fontPx": 10,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "#right > div:nth-of-type(1)",
+            "text": "ACTIVITY STREAM",
+            "fontPx": 10,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "#a1 > div:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "All systems nominal",
+            "fontPx": 10,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "#a2 > div:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "Natural language input",
+            "fontPx": 10,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "#a3 > div:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "YouTube playback",
+            "fontPx": 10,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "#a4 > div:nth-of-type(1) > small:nth-of-type(1)",
+            "text": "Useful hands, deployed",
+            "fontPx": 10,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "#top-status",
+            "text": "LOCAL SESSION / STANDBY",
+            "fontPx": 11,
+            "time": 0.5,
+            "seconds": 19.5
+          },
+          {
+            "selector": "div.center-head > span:nth-of-type(1)",
+            "text": "CONTROL CENTER",
+            "fontPx": 11,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "div.center-head > span:nth-of-type(2)",
+            "text": "SESSION 01 /",
+            "fontPx": 11,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "span.accent",
+            "text": "ENCRYPTED",
+            "fontPx": 11,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "#brain-pill > strong:nth-of-type(1)",
+            "text": "STANDBY",
+            "fontPx": 11,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "#tool-pill > strong:nth-of-type(1)",
+            "text": "READY",
+            "fontPx": 11,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "div.lockup > p:nth-of-type(1)",
+            "text": "STANDING BY",
+            "fontPx": 11,
+            "time": 16.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "#state-label",
+            "text": "STANDBY",
+            "fontPx": 12,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "#a1 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Core online",
+            "fontPx": 12,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "#a2 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Listening",
+            "fontPx": 12,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "#a3 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Tool selected",
+            "fontPx": 12,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "#a4 > div:nth-of-type(1) > p:nth-of-type(1)",
+            "text": "Action complete",
+            "fontPx": 12,
+            "time": 3.75,
+            "seconds": 15.75
+          },
+          {
+            "selector": "div.tag",
+            "text": "LOCAL INTELLIGENCE / USEFUL HANDS",
+            "fontPx": 12,
+            "time": 16.75,
+            "seconds": 3.25
+          },
+          {
+            "selector": "#left > div:nth-of-type(2) > span:nth-of-type(1)",
+            "text": "Local intelligence",
+            "fontPx": 13,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(3) > span:nth-of-type(1)",
+            "text": "Inference runtime",
+            "fontPx": 13,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(4) > span:nth-of-type(1)",
+            "text": "Browser control",
+            "fontPx": 13,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#left > div:nth-of-type(5) > span:nth-of-type(1)",
+            "text": "Data layer",
+            "fontPx": 13,
+            "time": 3.375,
+            "seconds": 16.125
+          },
+          {
+            "selector": "#command > b:nth-of-type(1)",
+            "text": "Waiting for command",
+            "fontPx": 14,
+            "time": 3.5,
+            "seconds": 16
+          },
+          {
+            "selector": "div.brand",
+            "text": "J A R V I S",
+            "fontPx": 22,
+            "time": 0.5,
+            "seconds": 19.5
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.25 s (13.25–16.50 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 13.25,
+        "seconds": 3.25,
+        "floorSeconds": 3,
+        "until": 16.5
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 160
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
