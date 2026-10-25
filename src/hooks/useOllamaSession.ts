@@ -142,6 +142,12 @@ export function useOllamaSession(): OllamaSession {
   const abortControllerRef =
     useRef<AbortController | null>(null);
 
+  const audioRef =
+    useRef<HTMLAudioElement | null>(null);
+
+  const audioUrlRef =
+    useRef<string | null>(null);
+
   const restartTimerRef =
     useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -213,7 +219,7 @@ export function useOllamaSession(): OllamaSession {
    */
 
   const speak = useCallback(
-    (text: string) => {
+    async (text: string) => {
       const cleanText = String(text ?? "").trim();
 
       if (!cleanText) {
@@ -224,10 +230,11 @@ export function useOllamaSession(): OllamaSession {
        * Stop previous speech.
        */
 
-      try {
-        window.speechSynthesis.cancel();
-      } catch {
-        // Ignore.
+      audioRef.current?.pause();
+      audioRef.current = null;
+      if (audioUrlRef.current) {
+        URL.revokeObjectURL(audioUrlRef.current);
+        audioUrlRef.current = null;
       }
 
       /*
@@ -244,21 +251,46 @@ export function useOllamaSession(): OllamaSession {
 
       setOrbState("speaking");
 
-      const utterance =
-        new SpeechSynthesisUtterance(cleanText);
+      try {
+        const response = await fetch("/api/tts", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: cleanText }),
+        });
 
-      utterance.lang = "en-US";
-      utterance.rate = 0.95;
-      utterance.pitch = 0.9;
-      utterance.volume = 1;
+        if (response.status === 404) {
+          // Fully local mode: Ollama answers in text and does not synthesize audio.
+          resumeListeningAfterSpeech();
+          return;
+        }
 
-      utterance.onend =
-        resumeListeningAfterSpeech;
+        if (!response.ok) {
+          const detail = await response.json().catch(() => null);
+          throw new Error(detail?.error ?? "ElevenLabs could not generate speech.");
+        }
 
-      utterance.onerror =
-        resumeListeningAfterSpeech;
-
-      window.speechSynthesis.speak(utterance);
+        const url = URL.createObjectURL(await response.blob());
+        if (!activeRef.current) {
+          URL.revokeObjectURL(url);
+          resumeListeningAfterSpeech();
+          return;
+        }
+        audioUrlRef.current = url;
+        const audio = new Audio(url);
+        audioRef.current = audio;
+        const finish = () => {
+          audioRef.current = null;
+          URL.revokeObjectURL(url);
+          if (audioUrlRef.current === url) audioUrlRef.current = null;
+          resumeListeningAfterSpeech();
+        };
+        audio.onended = finish;
+        audio.onerror = finish;
+        await audio.play();
+      } catch (error) {
+        console.error("[jarvis] ElevenLabs TTS error:", error);
+        resumeListeningAfterSpeech();
+      }
     },
     [resumeListeningAfterSpeech]
   );
@@ -1181,7 +1213,12 @@ export function useOllamaSession(): OllamaSession {
        */
 
       try {
-        window.speechSynthesis.cancel();
+      audioRef.current?.pause();
+      audioRef.current = null;
+      if (audioUrlRef.current) {
+        URL.revokeObjectURL(audioUrlRef.current);
+        audioUrlRef.current = null;
+      }
       } catch {
         // Ignore.
       }

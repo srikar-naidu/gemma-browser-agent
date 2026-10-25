@@ -65,6 +65,13 @@ OLLAMA_URL=http://127.0.0.1:11434/api/chat
 OLLAMA_MODEL=gemma4:e2b
 ```
 
+For optional ElevenLabs speech, add both values below. Leave them blank for fully local text-only mode:
+
+```env
+ELEVENLABS_API_KEY=your_elevenlabs_api_key
+ELEVENLABS_VOICE_ID=your_voice_id
+```
+
 Optional:
 
 ```env
