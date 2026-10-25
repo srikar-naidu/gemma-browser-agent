@@ -4,9 +4,12 @@ Jarvis is a local-first voice assistant that combines Ollama, Gemma 4 E2B, brows
 
 ## Launch video
 
-Watch the generated Jarvis launch video: [brag.mp4](brag-output-2026-10-25-214319/brag.mp4)
+<video controls preload="metadata" poster="brag-output-2026-10-25-214319/brag.jpg" width="100%">
+  <source src="brag-output-2026-10-25-214319/brag.mp4" type="video/mp4">
+  Your browser does not support the video tag. [Download the MP4](brag-output-2026-10-25-214319/brag.mp4).
+</video>
 
-![Jarvis launch video poster](brag-output-2026-10-25-214319/brag.jpg)
+The demo shows Jarvis turning “open YouTube and play 11K by Seedhemaut” into a browser action.
 
 To create a new launch video with Brag:
 
