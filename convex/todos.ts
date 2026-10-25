@@ -16,7 +16,7 @@ export const list = query({
     const all = await ctx.db
       .query("todos")
       .withIndex("by_user_status", (q) => q.eq("userId", userId))
-      .collect();
+      .take(200);
     const pending = all
       .filter((t) => t.status === "pending")
       .sort((a, b) => {
@@ -81,7 +81,7 @@ export const complete = mutation({
     const pending = await ctx.db
       .query("todos")
       .withIndex("by_user_status", (q) => q.eq("userId", userId).eq("status", "pending"))
-      .collect();
+      .take(200);
     const match = matchTodo(pending, args.title);
     if (!match) return { ok: false as const, message: "No matching pending to-do found." };
     await ctx.db.patch(match._id, { status: "done", completedAt: Date.now() });
@@ -103,7 +103,7 @@ export const update = mutation({
     const all = await ctx.db
       .query("todos")
       .withIndex("by_user_status", (q) => q.eq("userId", userId))
-      .collect();
+      .take(200);
     const match = matchTodo(all, args.title);
     if (!match) return { ok: false as const, message: "No matching to-do found." };
     const patch: Partial<Doc<"todos">> = {};
@@ -127,7 +127,7 @@ export const remove = mutation({
     const all = await ctx.db
       .query("todos")
       .withIndex("by_user_status", (q) => q.eq("userId", userId))
-      .collect();
+      .take(200);
     const match = matchTodo(all, args.title);
     if (!match) return { ok: false as const, message: "No matching to-do found." };
     await ctx.db.delete(match._id);

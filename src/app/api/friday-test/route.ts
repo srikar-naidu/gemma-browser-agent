@@ -4,6 +4,13 @@ const FRIDAY_ULTRON_URL =
     process.env.FRIDAY_ULTRON_URL ?? "http://localhost:3000";
 
 export async function POST() {
+    if (process.env.NODE_ENV !== "development") {
+        return NextResponse.json(
+            { error: "This test endpoint is available only in development." },
+            { status: 404 }
+        );
+    }
+
     try {
         // 1. Ask Ultron for an attack
         const attackRes = await fetch(

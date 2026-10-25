@@ -87,7 +87,9 @@ For Convex-backed features, run Convex in a second terminal:
 npx convex dev
 ```
 
-If the project has not been connected to Convex yet, follow the Convex CLI prompts and make sure the generated environment values are available to the app.
+The Convex CLI creates or selects a Convex deployment and supplies the deployment URL. The app reads that URL through `NEXT_PUBLIC_CONVEX_URL`; authentication also uses `CONVEX_SITE_URL`. Keep those values in the local environment used by the Next.js app.
+
+Convex stores the app's database records—profiles, messages, memory, todos, connections, dashboard state, and voice state—in the selected Convex deployment. `npx convex dev` normally uses a development deployment; production uses a separate deployment. Files such as profile avatars are stored in Convex file storage. The Gemma model itself is not stored in Convex: Ollama keeps it locally on the machine running Ollama.
 
 ## Available commands
 

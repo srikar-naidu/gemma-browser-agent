@@ -19,7 +19,8 @@ export const list = query({
     const facts = await ctx.db
       .query("memoryFacts")
       .withIndex("by_user_key", (q) => q.eq("userId", userId))
-      .collect();
+      .order("desc")
+      .take(200);
     return facts.sort((a, b) => b.updatedAt - a.updatedAt);
   },
 });
@@ -78,7 +79,7 @@ export const forget = mutation({
     const all = await ctx.db
       .query("memoryFacts")
       .withIndex("by_user_key", (q) => q.eq("userId", userId))
-      .collect();
+      .take(200);
     const match = all.find((f) => f.key.includes(key) || key.includes(f.key));
     if (match) {
       await ctx.db.delete(match._id);

@@ -11,7 +11,7 @@ export const list = query({
     return await ctx.db
       .query("connections")
       .withIndex("by_user_toolkit", (q) => q.eq("userId", userId))
-      .collect();
+      .take(50);
   },
 });
 

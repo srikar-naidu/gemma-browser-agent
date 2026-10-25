@@ -23,10 +23,15 @@ async function clearTable(
   table: UserTable,
   userId: Id<"users">
 ): Promise<number> {
-  const rows = await ctx.db
-    .query(table)
-    .filter((q) => q.eq(q.field("userId"), userId))
-    .collect();
+  const rows = table === "messages"
+    ? await ctx.db.query("messages").withIndex("by_user", (q) => q.eq("userId", userId)).take(500)
+    : table === "timelineEvents"
+      ? await ctx.db.query("timelineEvents").withIndex("by_user", (q) => q.eq("userId", userId)).take(500)
+      : table === "dashboard"
+        ? await ctx.db.query("dashboard").withIndex("by_user_key", (q) => q.eq("userId", userId)).take(100)
+        : table === "todos"
+          ? await ctx.db.query("todos").withIndex("by_user_status", (q) => q.eq("userId", userId)).take(500)
+          : await ctx.db.query("memoryFacts").withIndex("by_user_key", (q) => q.eq("userId", userId)).take(500);
   for (const row of rows) {
     await ctx.db.delete(row._id);
   }

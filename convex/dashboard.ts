@@ -12,7 +12,7 @@ export const getAll = query({
     const rows = await ctx.db
       .query("dashboard")
       .withIndex("by_user_key", (q) => q.eq("userId", userId))
-      .collect();
+      .take(50);
     for (const row of rows) {
       result[row.key] = { data: row.data, updatedAt: row.updatedAt };
     }

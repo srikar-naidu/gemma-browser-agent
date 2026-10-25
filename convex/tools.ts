@@ -6,6 +6,15 @@ import { v } from "convex/values";
 import { getComposio, SERVICES } from "./composio";
 import { requireUser } from "./auth";
 
+const toolNameValidator = v.union(
+  v.literal("remember"), v.literal("recall"), v.literal("forget"),
+  v.literal("add_todo"), v.literal("complete_todo"), v.literal("update_todo"),
+  v.literal("delete_todo"), v.literal("list_todos"), v.literal("list_services"),
+  v.literal("connect_service"), v.literal("get_emails"), v.literal("send_email"),
+  v.literal("get_calendar_events"), v.literal("create_calendar_event"),
+  v.literal("search_notes"), v.literal("read_note"), v.literal("prepare_daily_briefing")
+);
+
 type ToolResult = Record<string, unknown>;
 
 /* ------------------------------------------------------------------ */
@@ -72,7 +81,7 @@ export function shapeNotes(data: any): {
 
 export const execute = action({
   args: {
-    name: v.string(),
+    name: toolNameValidator,
     arguments: v.any(),
   },
   handler: async (ctx, { name, arguments: rawArgs }): Promise<ToolResult> => {
