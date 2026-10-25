@@ -11,6 +11,7 @@ import { JarvisOrb } from "./orb/JarvisOrb";
 import { Transcript } from "./Transcript";
 import { LeftPanel } from "./panels/LeftPanel";
 import { RightPanel } from "./panels/RightPanel";
+import { MiniAgentWidget } from "./MiniAgentWidget";
 
 export function JarvisApp() {
   const session = useOllamaSession();
@@ -128,6 +129,14 @@ export function JarvisApp() {
           <RightPanel />
         </div>
       </div>
+      <MiniAgentWidget
+        active={sessionAlive}
+        state={displayState}
+        mirroring={mirroring}
+        connecting={session.connecting}
+        onActivate={() => void session.activate()}
+        onDeactivate={session.deactivate}
+      />
     </div>
   );
 }

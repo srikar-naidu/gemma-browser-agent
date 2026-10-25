@@ -179,3 +179,136 @@ body {
 .text-glow {
   text-shadow: 0 0 18px var(--state-glow);
 }
+
+/* ------------------------------------------------------------------ */
+/* Floating mini agent                                                 */
+/* ------------------------------------------------------------------ */
+
+.mini-agent-shell {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.mini-agent-widget {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 174px;
+  padding: 9px 9px 9px 11px;
+  pointer-events: auto;
+  border: 1px solid rgba(176, 217, 239, 0.18);
+  border-radius: 15px;
+  background: linear-gradient(145deg, rgba(20, 31, 45, 0.92), rgba(5, 10, 18, 0.88));
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.46), inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 0 0 1px rgba(69, 216, 255, 0.03);
+  backdrop-filter: blur(22px) saturate(130%);
+  -webkit-backdrop-filter: blur(22px) saturate(130%);
+}
+
+.mini-agent-mark {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--state-color) 44%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 18px var(--state-glow), inset 0 0 10px var(--state-glow);
+}
+
+.mini-agent-core {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--state-color);
+  box-shadow: 0 0 9px var(--state-color);
+}
+
+.mini-agent-ring {
+  position: absolute;
+  inset: 5px;
+  border: 1px solid color-mix(in srgb, var(--state-color) 55%, transparent);
+  border-radius: 50%;
+}
+
+.mini-agent-ring-two {
+  inset: 9px;
+  opacity: 0.6;
+}
+
+.mini-agent-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.mini-agent-name {
+  color: rgba(236, 247, 255, 0.82);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.mini-agent-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+  color: rgba(206, 224, 239, 0.48);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mini-agent-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(180, 198, 212, 0.35);
+}
+
+.mini-agent-dot.active {
+  background: var(--state-color);
+  box-shadow: 0 0 8px var(--state-color);
+}
+
+.mini-agent-action {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border: 1px solid rgba(172, 220, 240, 0.16);
+  border-radius: 8px;
+  color: rgba(218, 241, 250, 0.65);
+  background: rgba(255, 255, 255, 0.045);
+  font-size: 16px;
+  line-height: 1;
+  transition: 180ms ease;
+}
+
+.mini-agent-action:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--state-color) 58%, transparent);
+  color: var(--state-color);
+  background: var(--state-glow);
+  transform: translateY(-1px);
+}
+
+.mini-agent-action:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+  .mini-agent-shell {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .mini-agent-widget {
+    min-width: 158px;
+  }
+}
