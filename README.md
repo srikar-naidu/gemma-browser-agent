@@ -4,11 +4,9 @@ Jarvis is a local-first voice assistant that combines Ollama, Gemma 4 E2B, brows
 
 ## Launch video
 
-<video controls preload="metadata" poster="https://raw.githubusercontent.com/srikar-naidu/gemma-browser-agent/main/brag-output-2026-10-25-214319/brag.jpg" width="100%" src="https://raw.githubusercontent.com/srikar-naidu/gemma-browser-agent/main/brag-output-2026-10-25-214319/brag.mp4">
+<video controls autoplay muted preload="auto" poster="https://raw.githubusercontent.com/srikar-naidu/gemma-browser-agent/main/brag-output-2026-10-25-214319/brag.jpg" width="100%" src="https://raw.githubusercontent.com/srikar-naidu/gemma-browser-agent/main/brag-output-2026-10-25-214319/brag.mp4">
   Your browser does not support the video tag.
 </video>
-
-[▶ Open or download the launch video](https://github.com/srikar-naidu/gemma-browser-agent/raw/refs/heads/main/brag-output-2026-10-25-214319/brag.mp4)
 
 The demo shows Jarvis turning “open YouTube and play 11K by Seedhemaut” into a browser action.
 
