@@ -241,7 +241,6 @@ export const execute = action({
           const composio = getComposio();
           const result = await composio.tools.execute("GMAIL_FETCH_EMAILS", {
             userId: String(userId),
-            dangerouslySkipVersionCheck: true,
             arguments: {
               query: args.query ?? "is:unread",
               max_results: args.max_results ?? 10,
@@ -276,7 +275,6 @@ export const execute = action({
           const composio = getComposio();
           const result = await composio.tools.execute("GMAIL_SEND_EMAIL", {
             userId: String(userId),
-            dangerouslySkipVersionCheck: true,
             arguments: {
               recipient_email: to,
               subject: args.subject ?? "",
@@ -303,7 +301,6 @@ export const execute = action({
           endOfDay.setHours(23, 59, 59, 999);
           const result = await composio.tools.execute("GOOGLECALENDAR_EVENTS_LIST", {
             userId: String(userId),
-            dangerouslySkipVersionCheck: true,
             arguments: {
               calendar_id: "primary",
               time_min: args.time_min ?? now.toISOString(),
@@ -337,7 +334,6 @@ export const execute = action({
           const durationMinutes = Number(args.duration_minutes ?? 30);
           const result = await composio.tools.execute("GOOGLECALENDAR_CREATE_EVENT", {
             userId: String(userId),
-            dangerouslySkipVersionCheck: true,
             arguments: {
               summary: args.summary ?? "New event",
               description: args.description ?? "Created by Jarvis",
@@ -369,7 +365,6 @@ export const execute = action({
           const composio = getComposio();
           const result = await composio.tools.execute("NOTION_SEARCH_NOTION_PAGE", {
             userId: String(userId),
-            dangerouslySkipVersionCheck: true,
             arguments: {
               query: args.query ?? "",
               page_size: args.max_results ?? 8,
@@ -403,7 +398,6 @@ export const execute = action({
             await log("executing", "Executing action", `Locating "${args.query ?? ""}" in Notion`);
             const search = await composio.tools.execute("NOTION_SEARCH_NOTION_PAGE", {
               userId: String(userId),
-              dangerouslySkipVersionCheck: true,
               arguments: { query: args.query ?? "", page_size: 5 },
             });
             if (!search.successful) return { error: "tool_failed", message: search.error };
@@ -422,7 +416,6 @@ export const execute = action({
           await log("executing", "Executing action", `Reading "${title ?? pageId}"`);
           const result = await composio.tools.execute("NOTION_GET_PAGE_MARKDOWN", {
             userId: String(userId),
-            dangerouslySkipVersionCheck: true,
             arguments: { page_id: pageId },
           });
           if (!result.successful) return { error: "tool_failed", message: result.error };

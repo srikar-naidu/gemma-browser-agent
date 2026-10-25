@@ -47,7 +47,6 @@ export const run = action({
       try {
         const result = await composio.tools.execute("GMAIL_FETCH_EMAILS", {
           userId: String(userId),
-          dangerouslySkipVersionCheck: true,
           arguments: { query: "is:unread", max_results: 10 },
         });
         if (result.successful) {
@@ -78,7 +77,6 @@ export const run = action({
         endOfDay.setHours(23, 59, 59, 999);
         const result = await composio.tools.execute("GOOGLECALENDAR_EVENTS_LIST", {
           userId: String(userId),
-          dangerouslySkipVersionCheck: true,
           arguments: {
             calendar_id: "primary",
             time_min: now.toISOString(),
@@ -114,7 +112,6 @@ export const run = action({
       try {
         const result = await composio.tools.execute("NOTION_SEARCH_NOTION_PAGE", {
           userId: String(userId),
-          dangerouslySkipVersionCheck: true,
           arguments: { query: "", page_size: 6 },
         });
         if (result.successful) {
